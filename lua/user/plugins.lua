@@ -48,7 +48,6 @@ return packer.startup(function(use)
   use "numToStr/Comment.nvim" -- Easily comment stuff
   use "kyazdani42/nvim-web-devicons"
   use "kyazdani42/nvim-tree.lua"
-  use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim"
   use "akinsho/toggleterm.nvim"
@@ -59,6 +58,7 @@ return packer.startup(function(use)
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
   use "simrat39/symbols-outline.nvim"
+  use "alexghergh/nvim-tmux-navigation"
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
@@ -85,6 +85,11 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+
+  -- DAP
+  use "mfussenegger/nvim-dap"
+  use "rcarriga/nvim-dap-ui"
+
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
