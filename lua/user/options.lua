@@ -37,6 +37,9 @@ local options = {
 
 vim.opt.shortmess:append "c"
 
+vim.opt.listchars:append({eol = '↵'}) 
+vim.opt.list = true
+
 for k, v in pairs(options) do
   vim.opt[k] = v
 end
