@@ -59,6 +59,7 @@ return packer.startup(function(use)
   use "folke/which-key.nvim"
   use "simrat39/symbols-outline.nvim"
   use "alexghergh/nvim-tmux-navigation"
+  use "ThePrimeagen/vim-be-good"
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
@@ -95,6 +96,8 @@ return packer.startup(function(use)
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
+
+  use "ThePrimeagen/harpoon"
 
   -- Treesitter
   use {
