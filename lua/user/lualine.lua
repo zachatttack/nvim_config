@@ -3,6 +3,11 @@ if not status_ok then
 	return
 end
 
+local status_gps_ok, gps = pcall(require, "nvim-gps")
+if not status_gps_ok then
+  return
+end
+
 local hide_in_width = function()
 	return vim.fn.winwidth(0) > 80
 end
@@ -48,6 +53,15 @@ local location = {
 	padding = 0,
 }
 
+local nvim_gps = function()
+  local gps_location = gps.get_location()
+  if gps_location == "error" then
+    return ""
+  else
+    return gps.get_location()
+  end
+end
+
 -- cool function for progress
 local progress = function()
 	local current_line = vim.fn.line(".")
@@ -62,6 +76,7 @@ local spaces = function()
 	return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
 end
 
+
 lualine.setup({
 	options = {
 		icons_enabled = true,
@@ -74,7 +89,9 @@ lualine.setup({
 	sections = {
 		lualine_a = { branch, diagnostics },
 		lualine_b = { mode },
-		lualine_c = { "filename"},
+    lualine_c = {
+      "filename", { nvim_gps, cond = hide_in_width},
+    },
 		-- lualine_x = { "encoding", "fileformat", "filetype" },
 		lualine_x = { diff, spaces, "encoding", filetype },
 		lualine_y = { location },

@@ -60,6 +60,10 @@ return packer.startup(function(use)
   use "simrat39/symbols-outline.nvim"
   use "alexghergh/nvim-tmux-navigation"
   use "ThePrimeagen/vim-be-good"
+  use "tversteeg/registers.nvim"
+  use "folke/todo-comments.nvim"
+  use "nacro90/numb.nvim"
+  -- use "andymass/vim-matchup"
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
@@ -86,7 +90,7 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
-  use "folke/trouble.nvim"
+  -- use "folke/trouble.nvim"
   use "ahmedkhalf/lsp-rooter.nvim"
 
   -- DAP
@@ -106,6 +110,10 @@ return packer.startup(function(use)
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
   use "p00f/nvim-ts-rainbow"
+  use {
+    "SmiteshP/nvim-gps",
+    requires = "nvim-treesitter/nvim-treesitter"
+  }
 
   -- Git
   use "lewis6991/gitsigns.nvim"

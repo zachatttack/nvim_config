@@ -3,7 +3,3 @@ if not status_ok then
 	return
 end
 
-router.setup({
-
-
-})
