@@ -168,6 +168,7 @@ local mappings = {
     R = { "<cmd>Telescope registers<cr>", "Registers" },
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     C = { "<cmd>Telescope commands<cr>", "Commands" },
+    f = { "<cmd>Telescope grep_string<cr>", "String under cursor" },
   },
 
 }
