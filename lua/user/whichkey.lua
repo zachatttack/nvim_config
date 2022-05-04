@@ -170,6 +170,18 @@ local mappings = {
     C = { "<cmd>Telescope commands<cr>", "Commands" },
     f = { "<cmd>Telescope grep_string<cr>", "String under cursor" },
   },
+  d = {
+    name = "Debug",
+    c = {"<cmd>lua require'dap'.continue()<CR>", "Continue"},
+    s = {"<cmd>lua require'dap'.step_over()<CR>", "Step over"},
+    i = {"<cmd>lua require'dap'.step_into()<CR>", "Step into"},
+    o = {"<cmd>lua require'dap'.step_out()<CR>", "Step out"},
+    b = {"<cmd>lua require'dap'.toggle_breakpoint()<CR>", "Toggle Breakpoint"},
+    B = {"<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", "Breakpoint condition"},
+    -- s = {"<cmd>lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>", "Continue"},
+    r = {"<cmd>lua require'dap'.repl.open()<CR>", "RELP"},
+    l = {"<cmd>lua require'dap'.run_last()<CR>", "Run last"},
+  },
 
 }
 
