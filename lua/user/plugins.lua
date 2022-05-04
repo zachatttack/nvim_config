@@ -96,6 +96,7 @@ return packer.startup(function(use)
   -- DAP
   use "mfussenegger/nvim-dap"
   use "rcarriga/nvim-dap-ui"
+  use "leoluz/nvim-dap-go"
 
 
   -- Telescope
