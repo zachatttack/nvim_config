@@ -3,6 +3,8 @@ if not status_ok then
 	return
 end
 
+require('dap-go').setup()
+
 dap.configurations.cpp = {
   {
     name = "Launch file",
@@ -109,3 +111,4 @@ require("dapui").setup({
   },
   windows = { indent = 1 },
 })
+

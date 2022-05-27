@@ -50,15 +50,20 @@ return packer.startup(function(use)
   use "kyazdani42/nvim-tree.lua"
   use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim"
-  use "akinsho/toggleterm.nvim"
+  -- use "akinsho/toggleterm.nvim"
   use "ahmedkhalf/project.nvim"
   use "lewis6991/impatient.nvim"
   use "lukas-reineke/indent-blankline.nvim"
-  use "goolord/alpha-nvim"
+  -- use "goolord/alpha-nvim"
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
   use "simrat39/symbols-outline.nvim"
   use "alexghergh/nvim-tmux-navigation"
+  use "ThePrimeagen/vim-be-good"
+  use "tversteeg/registers.nvim"
+  use "folke/todo-comments.nvim"
+  use "nacro90/numb.nvim"
+  -- use "andymass/vim-matchup"
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
@@ -86,14 +91,19 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+  -- use "folke/trouble.nvim"
+  use "ahmedkhalf/lsp-rooter.nvim"
 
   -- DAP
   use "mfussenegger/nvim-dap"
   use "rcarriga/nvim-dap-ui"
+  use "leoluz/nvim-dap-go"
 
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
+
+  use "ThePrimeagen/harpoon"
 
   -- Treesitter
   use {
@@ -102,6 +112,10 @@ return packer.startup(function(use)
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
   use "p00f/nvim-ts-rainbow"
+  use {
+    "SmiteshP/nvim-gps",
+    requires = "nvim-treesitter/nvim-treesitter"
+  }
 
   -- Git
   use "lewis6991/gitsigns.nvim"
