@@ -66,6 +66,7 @@ return packer.startup(function(use)
   use "EdenEast/nightfox.nvim"
   use "folke/tokyonight.nvim"
   use "xiyaowong/nvim-transparent"
+  use "chrisbra/Colorizer"
 
 
   -- cmp plugins
