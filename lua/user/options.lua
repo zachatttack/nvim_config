@@ -25,6 +25,7 @@ local options = {
   shiftwidth = 2,                          -- the number of spaces inserted for each indentation
   tabstop = 2,                             -- insert 2 spaces for a tab
   cursorline = true,                       -- highlight the current line
+
   number = true,                           -- set numbered lines
   relativenumber = true,                  -- set relative numbered lines
   numberwidth = 4,                         -- set number column width to 2 {default 4}
@@ -47,3 +48,23 @@ end
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
+
+
+if (vim.fn.has('wsl'))
+then
+vim.api.nvim_exec([[
+let g:clipboard = {
+      \   'name': 'win32yank-wsl',
+      \   'copy': {
+      \      '+': '/home/zach/.config/nvim/bin/win32yank.exe -i --crlf',
+      \      '*': '/home/zach/.config/nvim/bin/win32yank.exe -i --crlf',
+      \    },
+      \   'paste': {
+      \      '+': '/home/zach/.config/nvim/bin/win32yank.exe -o --lf',
+      \      '*': '/home/zach/.config/nvim/bin/win32yank.exe -o --lf',
+      \   },
+      \   'cache_enabled': 0,
+      \ }
+]], false)
+end
+
