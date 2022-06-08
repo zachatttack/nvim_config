@@ -52,3 +52,6 @@ keymap("n", "<A-t>", ":lua require('harpoon.ui').nav_file(1)<CR>", opts)
 keymap("n", "<A-s>", ":lua require('harpoon.ui').nav_file(2)<CR>", opts)
 keymap("n", "<A-r>", ":lua require('harpoon.ui').nav_file(3)<CR>", opts)
 keymap("n", "<A-a>", ":lua require('harpoon.ui').nav_file(4)<CR>", opts)
+
+-- Telescope --
+keymap("n", "<leader>/", ":Telescope current_buffer_fuzzy_find<CR>", opts)
