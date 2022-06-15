@@ -114,6 +114,11 @@ cmp.setup {
     { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
+    { name = 'buffer', options = {
+            get_bufnrs = function()
+              return vim.api.nvim_list_wins()
+              end
+          } },
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
