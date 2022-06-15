@@ -1,6 +1,6 @@
 local status_ok, transparent = pcall(require, "transparent")
 if not status_ok then
-	return
+  return
 end
 
 transparent.setup({
@@ -26,6 +26,8 @@ transparent.setup({
     "BufferLineSeparator",
 
     "BufferLineIndicatorSelected",
+    "NvimTreeNormal",
+
 
   },
 
