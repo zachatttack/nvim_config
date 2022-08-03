@@ -88,7 +88,9 @@ return packer.startup(function(use)
 
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
-  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  use "williamboman/mason.nvim"
+  use "williamboman/mason-lspconfig.nvim"
+
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
   use "RRethy/vim-illuminate"
@@ -106,6 +108,8 @@ return packer.startup(function(use)
   use "nvim-telescope/telescope.nvim"
 
   use "ThePrimeagen/harpoon"
+
+  use "lervag/vimtex"
 
   -- Treesitter
   use {
@@ -125,6 +129,9 @@ return packer.startup(function(use)
   -- Tmux
   use "vimpostor/vim-tpipeline"
 
+  use "simonefranza/nvim-conv"
+
+  use "B4rc1/obsidian-companion.nvim"
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
