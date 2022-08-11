@@ -24,4 +24,5 @@ require "zachatttack.todo"
 require "zachatttack.numb"
 require "zachatttack.gps"
 require "zachatttack.surround"
--- TODO neogit
+require "zachatttack.nvim-tmux-navigation"
+require "zachatttack.neogit"
