@@ -125,7 +125,10 @@ return packer.startup(function(use)
 
   -- Git
   use "lewis6991/gitsigns.nvim"
-  use "TimUntersberger/neogit"
+
+  use { 'TimUntersberger/neogit'}
+
+  use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
 
   -- Tmux
   use "vimpostor/vim-tpipeline"
