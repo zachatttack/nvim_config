@@ -10,7 +10,7 @@ end
 
 local lspconfig = require("lspconfig")
 
-local servers = { "sumneko_lua" , "ccls", "gopls"}
+local servers = { "sumneko_lua" , "ccls", "gopls", "pyright"}
 
 mason.setup()
 mason_lspconfig.setup()
