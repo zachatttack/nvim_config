@@ -90,6 +90,7 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/mason.nvim"
   use "williamboman/mason-lspconfig.nvim"
+  use "mfussenegger/nvim-jdtls"
 
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
@@ -136,7 +137,6 @@ return packer.startup(function(use)
   use "simonefranza/nvim-conv"
 
   use "kylechui/nvim-surround"
-
 -- install without yarn or npm
   use({
       "iamcco/markdown-preview.nvim",
