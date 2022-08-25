@@ -52,7 +52,7 @@ vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 
 
-if (vim.fn.has('wsl'))
+if (vim.fn.has('wsl') == 1)
 then
 vim.api.nvim_exec([[
 let g:clipboard = {
